@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 $table = $prefix . 'pages-layolt';
-$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Proxy'");
+$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Blocked_Browser'");
 $row   = mysqli_fetch_array($query);
 ?>
 	  <div class="page-header">
@@ -10,7 +10,7 @@ $row   = mysqli_fetch_array($query);
             <div class="bs-example">
               <div class="jumbotron">
                 <center>
-				<div class="well" style="background-color: #d9534f; color: white;">
+                <div class="well" style="background-color: #d9534f; color: white;">
                     <h2><?php
 echo $row['text'];
 ?></h2>

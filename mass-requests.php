@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 $table = $prefix . 'pages-layolt';
-$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Proxy'");
+$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Mass_Requests'");
 $row   = mysqli_fetch_array($query);
 ?>
 	  <div class="page-header">
@@ -18,7 +18,11 @@ echo $row['text'];
                     <p><img src="<?php
 echo $row['image'];
 ?>" width="200px" height="200px" /></p>
+                <p>Please wait a few seconds between the requests!</p>
                 <p>Please contact with the webmaster of the website if you think something is wrong.</p>
+                <a href="<?php
+echo "http://" . $_SERVER['HTTP_HOST'];
+?>" type="button" class="btn btn-primary btn-lg">Continue to the Website</a>
 				</center>
               </div>
             </div>

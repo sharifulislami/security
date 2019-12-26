@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 $table = $prefix . 'pages-layolt';
-$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Proxy'");
+$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Blocked'");
 $row   = mysqli_fetch_array($query);
 ?>
 	  <div class="page-header">

@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 $table = $prefix . 'pages-layolt';
-$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Proxy'");
+$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Bad_Bot'");
 $row   = mysqli_fetch_array($query);
 ?>
 	  <div class="page-header">
@@ -15,9 +15,6 @@ $row   = mysqli_fetch_array($query);
 echo $row['text'];
 ?></h2>
                 </div>
-                    <p><img src="<?php
-echo $row['image'];
-?>" width="200px" height="200px" /></p>
                 <p>Please contact with the webmaster of the website if you think something is wrong.</p>
 				</center>
               </div>

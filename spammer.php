@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 $table = $prefix . 'pages-layolt';
-$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Proxy'");
+$query = mysqli_query($connect, "SELECT * FROM `$table` WHERE page='Spam'");
 $row   = mysqli_fetch_array($query);
 ?>
 	  <div class="page-header">
@@ -19,6 +19,10 @@ echo $row['text'];
 echo $row['image'];
 ?>" width="200px" height="200px" /></p>
                 <p>Please contact with the webmaster of the website if you think something is wrong.</p>
+                <p>To check in which Spam Database (DNSBL) you attend click the button below:</p>
+                <a href="http://www.dnsbl-check.info/?checkip=<?php
+echo $_SERVER['REMOTE_ADDR'];
+?>" type="button" class="btn btn-primary btn-lg" target="_blank">Check</a>
 				</center>
               </div>
             </div>
